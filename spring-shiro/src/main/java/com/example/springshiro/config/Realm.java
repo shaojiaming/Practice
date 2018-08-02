@@ -23,7 +23,7 @@ public class Realm extends AuthorizingRealm {
 
     @Override
     protected AuthorizationInfo doGetAuthorizationInfo(PrincipalCollection principals) {
-        System.out.println("权限配置-->MyShiroRealm.doGetAuthorizationInfo()");
+        System.out.println("权限配置-->Realm.doGetAuthorizationInfo()");
         SimpleAuthorizationInfo authorizationInfo = new SimpleAuthorizationInfo();
         UserInfo userInfo  = (UserInfo)principals.getPrimaryPrincipal();
         for(SysRole role:userInfo.getRoleList()){
@@ -39,7 +39,7 @@ public class Realm extends AuthorizingRealm {
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token)
             throws AuthenticationException {
-        System.out.println("MyShiroRealm.doGetAuthenticationInfo()");
+        System.out.println("Realm.doGetAuthenticationInfo()");
         //获取用户的输入的账号.
         String username = (String)token.getPrincipal();
         System.out.println(token.getCredentials());

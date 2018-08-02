@@ -1,0 +1,7 @@
+*.xml
+*.jar
+spring-shiro/.mvn/wrapper/maven-wrapper.properties
+spring-shiro/mvnw
+*.iml
+spring-shiro/mvnw.cmd
+*.class

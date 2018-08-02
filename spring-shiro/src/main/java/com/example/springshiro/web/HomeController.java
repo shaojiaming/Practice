@@ -12,6 +12,7 @@ import java.util.Map;
 public class HomeController {
     @RequestMapping({"/","/index"})
     public String index(){
+        System.out.println("HomeController.index()");
         return"/index";
     }
 
