@@ -16,6 +16,7 @@ public class HomeController {
         return"/index";
     }
 
+    //退出由shiro实现只需在shiroconfig配置即可
     @RequestMapping("/login")
     public String login(HttpServletRequest request, Map<String, Object> map) throws Exception{
         System.out.println("HomeController.login()");
